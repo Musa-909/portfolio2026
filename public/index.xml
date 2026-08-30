@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Musa&#39;s portfolio website 2026</title>
-    <link>http://localhost:56093/</link>
+    <link>http://localhost:56143/</link>
     <description>Recent content on Musa&#39;s portfolio website 2026</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Musa Sayed</copyright>
-    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:56093/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:56143/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Driving School Management System - Week 1</title>
-      <link>http://localhost:56093/posts/delphie/</link>
+      <link>http://localhost:56143/posts/delphie/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:56093/posts/delphie/</guid>
+      <guid>http://localhost:56143/posts/delphie/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>About</title>
-      <link>http://localhost:56093/about/</link>
+      <link>http://localhost:56143/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:56093/about/</guid>
+      <guid>http://localhost:56143/about/</guid>
       <description></description>
       
     </item>
