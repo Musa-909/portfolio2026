@@ -40,19 +40,18 @@ Coming soon
 
 ---
 
-## Project Development
+## Projektudvikling
 
-| Course Topic | How We Used It in DriveApp | Course Material |
+| Kursusemne | Hvordan vi har anvendt det i DriveApp | Undervisningsmateriale |
 |---|---|---|
-| **01 JPA Basics** | We used Hibernate/JPA and DAO classes to store and manage data in PostgreSQL. | [JPA Basics](https://3sem.kursusmaterialer.dk/backend/jpa-basics/) |
-| **02 JPA Relations** | We created relationships between students, instructors, lessons, and bookings. | [JPA Relations](https://3sem.kursusmaterialer.dk/backend/jpa-relations/) |
-| **03 Data Integration** | We used DTOs, JSON, and Java HttpClient to exchange data and communicate with Google Gemini. | [Data Integration](https://3sem.kursusmaterialer.dk/backend/data-integration/) |
-| **04 Concurrency** | We used `CompletableFuture` to handle asynchronous HTTP requests to Google Gemini. | [Concurrency](https://3sem.kursusmaterialer.dk/backend/concurrency/) |
-| **05 REST API Intro** | We built our REST API using Javalin, routes, controllers, and HTTP methods. | [REST API Intro](https://3sem.kursusmaterialer.dk/backend/rest-intro/) |
-| **06 REST & Test** | We used JUnit and REST Assured to test our API endpoints and functionality. | [REST & Test](https://3sem.kursusmaterialer.dk/backend/rest-test/) |
-| **07 Security** | We implemented JWT authentication, BCrypt password hashing, and role-based authorization. | [Security](https://3sem.kursusmaterialer.dk/backend/security/) |
-| **08 Deployment & DevOps** | We used GitHub Actions, Docker, Docker Hub, and DigitalOcean to deploy our backend. | [Deployment & DevOps](https://3sem.kursusmaterialer.dk/backend/deployment/) |
-
+| **01 JPA Basics** | Vi har brugt Hibernate/JPA og DAO-klasser til at gemme og administrere data i PostgreSQL. | [JPA Basics](https://3sem.kursusmaterialer.dk/backend/jpa-basics/) |
+| **02 JPA Relations** | Vi har oprettet relationer mellem elever, kørelærere, køretimer og bookinger. | [JPA Relations](https://3sem.kursusmaterialer.dk/backend/jpa-relations/) |
+| **03 Data Integration** | Vi har brugt DTO'er, JSON og Java HttpClient til at udveksle data og kommunikere med Google Gemini. | [Data Integration](https://3sem.kursusmaterialer.dk/backend/data-integration/) |
+| **04 Concurrency** | Vi har brugt `CompletableFuture` til at håndtere asynkrone HTTP-requests til Google Gemini. | [Concurrency](https://3sem.kursusmaterialer.dk/backend/concurrency/) |
+| **05 REST API Intro** | Vi har udviklet vores REST API med Javalin, routes, controllers og HTTP-metoder. | [REST API Intro](https://3sem.kursusmaterialer.dk/backend/rest-intro/) |
+| **06 REST & Test** | Vi har brugt JUnit og REST Assured til at teste vores API-endpoints og funktionalitet. | [REST & Test](https://3sem.kursusmaterialer.dk/backend/rest-test/) |
+| **07 Security** | Vi har implementeret JWT authentication, BCrypt password hashing og rollebaseret adgangskontrol. | [Security](https://3sem.kursusmaterialer.dk/backend/security/) |
+| **08 Deployment & DevOps** | Vi har brugt GitHub Actions, Docker, Docker Hub og DigitalOcean til at deploye vores backend. | [Deployment & DevOps](https://3sem.kursusmaterialer.dk/backend/deployment/) |
 ---
 
 # Week 1 – Project Setup, JPA & CRUD

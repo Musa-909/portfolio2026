@@ -2,49 +2,119 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Musa&#39;s portfolio website 2026</title>
-    <link>http://localhost:49223/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Musa&#39;s portfolio website 2026</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Musa Sayed</copyright>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:49223/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Driving School Management System - Week 1</title>
-      <link>http://localhost:49223/posts/week-1/</link>
+      <link>http://localhost:1313/posts/week-1/</link>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49223/posts/week-1/</guid>
+      <guid>http://localhost:1313/posts/week-1/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Driving School Management System - Week 2</title>
-      <link>http://localhost:49223/posts/week-2/</link>
+      <link>http://localhost:1313/posts/week-2/</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49223/posts/week-2/</guid>
+      <guid>http://localhost:1313/posts/week-2/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Driving School Management System - Week 3</title>
-      <link>http://localhost:49223/posts/week-3/</link>
+      <link>http://localhost:1313/posts/week-3/</link>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49223/posts/week-3/</guid>
+      <guid>http://localhost:1313/posts/week-3/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Driving School Management System - Week 4</title>
+      <link>http://localhost:1313/posts/week-4/</link>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-4/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SP-1 Movie Repository - Week 5</title>
+      <link>http://localhost:1313/posts/week-5-sp1/</link>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-5-sp1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Driving School Management System - Week 5 REST API</title>
+      <link>http://localhost:1313/posts/week-5/</link>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-5/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Driving School Management System - Week 6</title>
+      <link>http://localhost:1313/posts/week-6/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-6/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Driving School Management System - Week 7</title>
+      <link>http://localhost:1313/posts/week-7/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-7/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Driving School Management System - Week 8</title>
+      <link>http://localhost:1313/posts/week-8/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/week-8/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Exam Portfolio</title>
+      <link>http://localhost:1313/exam-portfolio/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/exam-portfolio/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>About</title>
-      <link>http://localhost:49223/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49223/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
       
     </item>
