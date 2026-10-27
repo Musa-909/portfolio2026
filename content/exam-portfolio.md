@@ -42,16 +42,16 @@ Coming soon
 
 ## Project Development
 
-| Week | Main Focus |
-|---|---|
-| Week 1 | Project Setup, JPA & CRUD |
-| Week 2 | JPA Relations, JPQL & Testing |
-| Week 3 | Data Integration & Gemini AI |
-| Week 4 | Concurrency & Booking System |
-| Week 5 | REST API & Javalin |
-| Week 6 | REST Testing & Integration Tests |
-| Week 7 | Security, BCrypt & JWT |
-| Week 8 | Deployment & DevOps |
+| Course Topic | How We Used It in DriveApp | Course Material |
+|---|---|---|
+| **01 JPA Basics** | We used Hibernate/JPA and DAO classes to store and manage data in PostgreSQL. | [JPA Basics](https://3sem.kursusmaterialer.dk/backend/jpa-basics/) |
+| **02 JPA Relations** | We created relationships between students, instructors, lessons, and bookings. | [JPA Relations](https://3sem.kursusmaterialer.dk/backend/jpa-relations/) |
+| **03 Data Integration** | We used DTOs, JSON, and Java HttpClient to exchange data and communicate with Google Gemini. | [Data Integration](https://3sem.kursusmaterialer.dk/backend/data-integration/) |
+| **04 Concurrency** | We used `CompletableFuture` to handle asynchronous HTTP requests to Google Gemini. | [Concurrency](https://3sem.kursusmaterialer.dk/backend/concurrency/) |
+| **05 REST API Intro** | We built our REST API using Javalin, routes, controllers, and HTTP methods. | [REST API Intro](https://3sem.kursusmaterialer.dk/backend/rest-intro/) |
+| **06 REST & Test** | We used JUnit and REST Assured to test our API endpoints and functionality. | [REST & Test](https://3sem.kursusmaterialer.dk/backend/rest-test/) |
+| **07 Security** | We implemented JWT authentication, BCrypt password hashing, and role-based authorization. | [Security](https://3sem.kursusmaterialer.dk/backend/security/) |
+| **08 Deployment & DevOps** | We used GitHub Actions, Docker, Docker Hub, and DigitalOcean to deploy our backend. | [Deployment & DevOps](https://3sem.kursusmaterialer.dk/backend/deployment/) |
 
 ---
 
