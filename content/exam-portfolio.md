@@ -26,7 +26,7 @@ På denne side gennemgår jeg projektets udvikling uge for uge. Jeg beskriver b�
 
 **GitHub Repository**
 
-[DriveApp – kildekode](https://github.com/Musa-909/DriveApp)
+[DriveApp – sourcecode](https://github.com/Musa-909/DriveApp)
 
 **Deployed Application**
 
