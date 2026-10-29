@@ -1,162 +1,165 @@
----
-title: "Exam Portfolio"
-date: 2026-10-27
+
+
+
+
+⸻
+
+title: “Exam Portfolio”
+date: 2026-10-29
 draft: false
 showDate: false
 showReadingTime: false
 showWordCount: false
 showAuthor: false
----
 
-# Driving School Management System – DriveApp
+Driving School Management System – DriveApp
 
-DriveApp er vores semesterprojekt, hvor vi har udviklet et backend system til administration af en køreskole.
+DriveApp er vores semesterprojekt, hvor vi har udviklet et backend-system til administration af en køreskole.
 
 Formålet med projektet er at gøre det nemmere at administrere elever, kørelærere, køretimer og bookinger gennem et samlet system.
 
-Vi har udviklet projektet i Java og brugt PostgreSQL som database. Gennem semesteret har vi løbende udvidet systemet med de teknologier og emner, vi har arbejdet med i undervisningen.
+Vi har udviklet projektet i Java med Javalin som REST API-framework, Hibernate/JPA til databasehåndtering og PostgreSQL som database.
 
-Systemet indeholder blandt andet funktioner til håndtering af elever, kørelærere, køretimer og bookinger. Vi har også integreret en AI-assistent, som kan hjælpe med spørgsmål om køreteori og trafikregler.
+Systemet indeholder funktioner til håndtering af elever, kørelærere, køretimer og bookinger. Vi har også integreret Google Gemini som en AI-assistent, der kan hjælpe med spørgsmål om køreteori og trafikregler.
 
-Derudover har vi arbejdet med REST API, automatiserede tests, sikkerhed og deployment.
+Derudover har vi arbejdet med sikkerhed gennem JWT og BCrypt, automatiserede tests med JUnit, REST Assured og Testcontainers samt deployment med Docker og GitHub Actions.
 
-Denne side dokumenterer udviklingen af DriveApp fra uge 1 til uge 8 og viser, hvordan vi har anvendt semesterets læringsmål i vores eget projekt.
+Denne side dokumenterer udviklingen af DriveApp gennem semesterets otte emner og viser, hvordan vi har anvendt undervisningens teknologier i vores eget projekt.
 
----
+⸻
 
-## Project Links
+Project Links
 
-**GitHub Repository:**
+GitHub Repository:
 
-[DriveApp – GitHub](https://github.com/Musa-909/DriveApp)
+DriveApp – GitHub
 
-**Deployed API:**
+Deployed API:
 
-[DriveApp](https://driveapp.website)
+DriveApp – Deployed API
 
-**Exam Video:**
+⸻
 
-Coming soon
+Projektudvikling
 
----
+Kursusemne	Hvordan vi har anvendt det i DriveApp	Undervisningsmateriale
+01 JPA Basics	Hibernate/JPA, EntityManager, DAO-klasser og CRUD-operationer med PostgreSQL.	JPA Basics
+02 JPA Relations	Relationer mellem Student, Instructor, Lesson og Booking samt JPQL.	JPA Relations
+03 Data Integration	JSON, DTO’er, Java HttpClient, Jackson og integration med Google Gemini.	Data Integration
+04 Concurrency	CompletableFuture til asynkron AI-kommunikation og arbejde med samtidighed i bookingsystemer.	Concurrency
+05 REST API Intro	REST API med Javalin, routes, controllers og HTTP-metoder.	REST API Intro
+06 REST & Test	JUnit, REST Assured, Hamcrest og PostgreSQL-integrationstests med Testcontainers.	REST & Test
+07 Security	JWT-authentication, BCrypt password hashing og rollebaseret adgangskontrol.	Security
+08 Deployment & DevOps	Docker, Docker Hub, GitHub Actions, CI/CD og DigitalOcean.	Deployment & DevOps
 
-## Projektudvikling
+⸻
 
-| Kursusemne | Hvordan vi har anvendt det i DriveApp | Undervisningsmateriale |
-|---|---|---|
-| **01 JPA Basics** | Vi har brugt Hibernate/JPA og DAO-klasser til at gemme og administrere data i PostgreSQL. | [JPA Basics](https://3sem.kursusmaterialer.dk/backend/jpa-basics/) |
-| **02 JPA Relations** | Vi har oprettet relationer mellem elever, kørelærere, køretimer og bookinger. | [JPA Relations](https://3sem.kursusmaterialer.dk/backend/jpa-relations/) |
-| **03 Data Integration** | Vi har brugt DTO'er, JSON og Java HttpClient til at udveksle data og kommunikere med Google Gemini. | [Data Integration](https://3sem.kursusmaterialer.dk/backend/data-integration/) |
-| **04 Concurrency** | Vi har brugt `CompletableFuture` til at håndtere asynkrone HTTP-requests til Google Gemini. | [Concurrency](https://3sem.kursusmaterialer.dk/backend/concurrency/) |
-| **05 REST API Intro** | Vi har udviklet vores REST API med Javalin, routes, controllers og HTTP-metoder. | [REST API Intro](https://3sem.kursusmaterialer.dk/backend/rest-intro/) |
-| **06 REST & Test** | Vi har brugt JUnit og REST Assured til at teste vores API-endpoints og funktionalitet. | [REST & Test](https://3sem.kursusmaterialer.dk/backend/rest-test/) |
-| **07 Security** | Vi har implementeret JWT authentication, BCrypt password hashing og rollebaseret adgangskontrol. | [Security](https://3sem.kursusmaterialer.dk/backend/security/) |
-| **08 Deployment & DevOps** | Vi har brugt GitHub Actions, Docker, Docker Hub og DigitalOcean til at deploye vores backend. | [Deployment & DevOps](https://3sem.kursusmaterialer.dk/backend/deployment/) |
----
-
-# Week 1 – Project Setup, JPA & CRUD
+Week 1 – Project Setup, JPA & CRUD
 
 I den første uge begyndte vi udviklingen af DriveApp.
 
-Vi startede med at planlægge projektets grundlæggende struktur og oprette forbindelsen mellem vores Java-applikation og PostgreSQL.
+Vi planlagde projektets grundlæggende struktur og oprettede forbindelsen mellem vores Java-applikation og PostgreSQL.
 
 Vi brugte JPA og Hibernate til at håndtere kommunikationen med databasen, så vi kunne arbejde med Java-objekter i stedet for at skrive SQL til alle databaseoperationer.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Oprettet vores Java-projekt med Maven
-- Konfigureret JPA og Hibernate
-- Oprettet forbindelse til PostgreSQL
-- Arbejdet med vores første entities
-- Oprettet Student og Instructor
-- Oprettet DAO-klasser til databaseoperationer
-- Implementeret CRUD-operationer
-- Arbejdet med EntityManager
-- Konfigureret HibernateConfig
-- Testet vores databaseforbindelse
+* Oprettet Java-projektet med Maven.
+* Konfigureret JPA og Hibernate.
+* Oprettet forbindelse til PostgreSQL.
+* Oprettet vores første entities: Student og Instructor.
+* Oprettet DAO-klasser til databaseoperationer.
+* Implementeret CRUD-operationer.
+* Arbejdet med EntityManager og EntityManagerFactory.
+* Konfigureret HibernateConfig.
+* Testet databaseforbindelsen.
 
-### Resultat
+Resultat
 
 Vi fik etableret projektets grundlæggende backend og databaseforbindelse.
 
-Gennem vores DAO-lag kunne vi oprette, hente, opdatere og slette oplysninger i databasen.
+Gennem DAO-laget kunne vi oprette, hente, opdatere og slette oplysninger i databasen.
 
-Det gav os et fundament, som vi kunne bygge videre på gennem resten af semesteret.
+Senere har vi videreudviklet DAO-klasserne med constructor injection, så de kan modtage en EntityManagerFactory og dermed bruge forskellige databaseforbindelser i udvikling og tests.
 
----
+⸻
 
-# Week 2 – JPA Relations, JPQL & Testing
+Week 2 – JPA Relations, JPQL & Testing
 
 I uge 2 fortsatte vi med at udvikle databasestrukturen i DriveApp.
 
-Vi arbejdede med relationer mellem vores entities og lærte, hvordan forskellige tabeller kan forbindes ved hjælp af JPA.
+Vi arbejdede med relationer mellem vores entities og lærte, hvordan forskellige tabeller kan forbindes gennem JPA.
 
-Det var vigtigt for vores projekt, fordi en køreskole har flere forskellige oplysninger, der hænger sammen.
+Det var vigtigt for projektet, fordi elever, kørelærere, køretimer og bookinger hænger sammen.
 
-Eksempelvis skal en køretime kunne forbindes til en kørelærer, og en booking skal kunne forbindes til en elev.
+Eksempelvis skal en køretime kunne forbindes til en kørelærer, og en booking skal kunne forbindes til en elev og en køretime.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Arbejdet med JPA-relationer
-- Udvidet vores entities
-- Arbejdet med Student, Instructor, Lesson og Booking
-- Implementeret relationer mellem vores entities
-- Brugt @OneToMany og @ManyToOne
-- Arbejdet med foreign keys
-- Udvidet vores DAO-klasser
-- Implementeret JPQL-queries
-- Arbejdet med databaseforespørgsler
-- Oprettet automatiserede tests med JUnit
-- Testet CRUD-operationer og relationer
+* Arbejdet med JPA-relationer.
+* Udvidet vores entities.
+* Arbejdet med Student, Instructor, Lesson og Booking.
+* Brugt JPA-annoteringer til relationer.
+* Arbejdet med foreign keys.
+* Udvidet DAO-klasserne.
+* Implementeret JPQL-queries.
+* Arbejdet med databaseforespørgsler.
+* Oprettet automatiserede DAO-tests med JUnit.
+* Testet CRUD-operationer og relationer.
 
-### Resultat
+Resultat
 
-Vi fik udvidet vores databasestruktur, så de forskellige dele af køreskolen kunne forbindes.
+Vi fik udvidet databasestrukturen, så de forskellige dele af køreskolen kunne forbindes.
 
 Vi lærte samtidig at bruge JPQL til at hente bestemte oplysninger fra databasen.
 
-Ved hjælp af automatiserede tests kunne vi kontrollere, at vores DAO metoder fungerede som forventet.
+Senere har vi forbedret vores DAO-tests ved at bruge Testcontainers, så de nu arbejder mod en isoleret PostgreSQL-database.
 
----
+⸻
 
-# Week 3 – Data Integration & Gemini AI
+Week 3 – Data Integration & Gemini AI
 
-I uge 3 arbejdede vi med data integration og kommunikation med eksterne API'er.
+I uge 3 arbejdede vi med dataintegration og kommunikation med eksterne API’er.
 
-Vi valgte at integrere Google Gemini i DriveApp for at tilføje en AI-assistent til vores køreskolesystem.
+Vi valgte at integrere Google Gemini i DriveApp for at tilføje en AI-assistent til køreskolesystemet.
 
 Formålet var at give elever mulighed for at stille spørgsmål om køreteori, trafikregler og trafiksikkerhed.
 
-Vi arbejdede samtidig med JSON og DTO'er for at kunne sende og modtage data mellem vores Java-applikation og Gemini.
+Vi arbejdede samtidig med JSON og DTO’er for at kunne sende og modtage data mellem vores Java-applikation og Gemini.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Integreret Gemini API i DriveApp
-- Oprettet DrivingAiService
-- Arbejdet med Java HttpClient
-- Sendt HTTP-requests til Gemini
-- Arbejdet med JSON
-- Brugt Jackson og ObjectMapper
-- Arbejdet med serialization og deserialization
-- Oprettet DTO-klasser til Gemini-responses
-- Arbejdet med Candidate, Content, Part og GeminiResponse
-- Modtaget og behandlet svar fra Gemini
-- Oprettet DrivingAiServiceTest
-- Testet kommunikationen med det eksterne API
+* Integreret Google Gemini API.
+* Oprettet DrivingAiService.
+* Arbejdet med Java HttpClient.
+* Sendt HTTP-requests til Gemini.
+* Arbejdet med JSON.
+* Brugt Jackson og ObjectMapper.
+* Arbejdet med serialization og deserialization.
+* Oprettet DTO-klasser til Gemini-responses.
+* Arbejdet med Candidate, Content, Part og GeminiResponse.
+* Modtaget og behandlet svar fra Gemini.
+* Oprettet DrivingAiServiceTest.
+* Testet kommunikationen med det eksterne API.
 
-### Resultat
+Resultat
 
-Vi fik implementeret en AI-service, som kunne kommunikere med Gemini API.
+Vi fik implementeret en AI-service, som kan kommunikere med Gemini API.
 
-DriveApp kunne nu sende spørgsmål til Gemini og behandle de svar, der kom tilbage.
+DriveApp kan sende spørgsmål til Gemini og behandle de svar, der kommer tilbage.
 
-Vi fik dermed erfaring med at integrere eksterne services i vores egen backend.
+Vi har efterfølgende udvidet løsningen, så Application kan modtage en AI-funktion gennem dependency injection.
 
-Senere i projektet har vi arbejdet videre med AI-funktionen og tilføjet tests af adgangen gennem vores REST API.
+Det gør det muligt at teste AI-endpointet med et simuleret svar uden at kontakte Gemini.
 
----
+Vi har derfor to typer AI-tests:
 
-# Week 4 – Concurrency & Booking System
+* DrivingAiServiceTest: Tester kommunikationen med den rigtige Gemini API.
+* AiApiTest: Tester AI-endpointets adgangskontrol og svarstruktur med en fake AI-service.
+
+⸻
+
+Week 4 – Concurrency & Booking System
 
 I uge 4 arbejdede vi med concurrency og multithreading i Java.
 
@@ -164,34 +167,34 @@ Vi lærte, hvordan flere threads kan udføre opgaver samtidigt, og hvilke proble
 
 Det var særligt relevant for vores bookingsystem.
 
-Hvis to elever forsøger at booke den samme køretime på samme tidspunkt, skal systemet kunne håndtere situationen korrekt.
+Hvis to elever forsøger at booke den samme køretime på samme tidspunkt, kan der opstå en race condition.
 
-### Det har vi implementeret
+Det har vi arbejdet med
 
-- Arbejdet med threads i Java
-- Lært om Runnable og multithreading
-- Arbejdet med ExecutorService
-- Undersøgt race conditions
-- Arbejdet med synchronized
-- Udviklet vores BookingService
-- Arbejdet med bookLesson-metoden
-- Implementeret kontrol af eksisterende bookinger
-- Arbejdet med samtidige bookingforsøg
-- Testet situationer, hvor flere elever forsøger at booke samme køretime
+* Threads og multithreading i Java.
+* Runnable og ExecutorService.
+* Race conditions.
+* Synchronized.
+* Bookingfunktionalitet.
+* Kontrol af eksisterende bookinger.
+* Udfordringer ved samtidige bookingforsøg.
+* CompletableFuture til asynkron AI-kommunikation.
 
-### Resultat
+Resultat
 
-Vi arbejdede med at beskytte vores bookingsystem mod problemer med samtidige requests.
+Vi arbejdede med at forstå og håndtere de problemer, der kan opstå ved samtidige requests.
 
-Ved hjælp af synchronized kunne vi sikre, at flere threads ikke udførte den beskyttede bookingmetode samtidigt på samme serviceinstans.
+En vigtig del af bookingfunktionaliteten er at kontrollere, om en køretime allerede er booket, før en ny booking oprettes.
 
-Vi lærte samtidig, hvorfor det er vigtigt at kontrollere, om en køretime allerede er booket, før en ny booking bliver oprettet.
+Vi arbejdede også med synchronized og lærte, hvordan det kan forhindre flere threads i at udføre en beskyttet metode samtidigt på samme objekt.
 
-Arbejdet gav os en bedre forståelse for concurrency og de udfordringer, der kan opstå i backend-systemer med flere brugere.
+Vi lærte samtidig, at synchronized ikke alene garanterer beskyttelse mod dobbeltbookinger, hvis applikationen kører på flere serverinstanser.
 
----
+Arbejdet gav os en bedre forståelse for concurrency og betydningen af dataintegritet i backend-systemer.
 
-# Week 5 – REST API, Javalin & Documentation
+⸻
+
+Week 5 – REST API, Javalin & Documentation
 
 I uge 5 begyndte vi at gøre vores backend tilgængelig gennem et REST API.
 
@@ -199,78 +202,129 @@ Indtil dette tidspunkt havde vi primært arbejdet med vores database, entities o
 
 Nu skulle funktionerne kunne tilgås gennem HTTP-requests.
 
-Vi valgte at bruge Javalin til at udvikle vores REST API.
+Vi valgte at bruge Javalin til at udvikle REST API’et.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Tilføjet Javalin til projektet
-- Oprettet routes og controllers
-- Arbejdet med REST-principper
-- Implementeret GET, POST, PUT og DELETE
-- Oprettet endpoints til elever
-- Oprettet endpoints til kørelærere
-- Oprettet endpoints til køretimer
-- Oprettet endpoints til bookinger
-- Forbundet controllers med vores backend
-- Arbejdet med request- og response-DTO'er
-- Implementeret validering af requests
-- Arbejdet med HTTP-statuskoder
-- Implementeret fejlhåndtering
-- Dokumenteret vores endpoints i README
+* Tilføjet Javalin.
+* Oprettet routes og controllers.
+* Arbejdet med REST-principper.
+* Implementeret GET, POST, PUT og DELETE.
+* Oprettet endpoints til elever.
+* Oprettet endpoints til kørelærere.
+* Oprettet endpoints til køretimer.
+* Oprettet endpoints til bookinger.
+* Forbundet controllers med DAO-laget.
+* Arbejdet med request- og response-DTO’er.
+* Implementeret validering af requests.
+* Arbejdet med HTTP-statuskoder.
+* Implementeret fejlhåndtering.
+* Dokumenteret API-endpoints i README.
 
-### Resultat
+Resultat
 
-Vi fik udviklet et REST API, som gjorde det muligt at kommunikere med vores backend gennem HTTP.
+Vi fik udviklet et REST API, som gør det muligt at kommunikere med vores backend gennem HTTP.
 
-Vi kunne nu arbejde med elever, kørelærere, køretimer og bookinger gennem vores endpoints.
+Vi opdelte applikationen i forskellige lag:
 
-Vi lærte samtidig, hvorfor det er vigtigt at opdele applikationen i forskellige lag.
+HTTP Request → Route → Controller → DAO → Hibernate/JPA → PostgreSQL → JSON Response
 
-Controllers håndterer HTTP-requests, mens vores øvrige backend-klasser håndterer forretningslogik og databaseoperationer.
+Routes definerer vores endpoints, controllers håndterer requests, og DAO-laget kommunikerer med databasen.
 
-Vi dokumenterede vores API i README, så andre lettere kunne forstå og bruge vores endpoints.
+Vi har senere forbedret Application, så den kan modtage en EntityManagerFactory gennem dependency injection.
 
----
+Det gør applikationen lettere at teste, fordi vi kan starte den med en separat testdatabase.
 
-# Week 6 – REST Testing & Integration Tests
+⸻
+
+Week 6 – REST Testing & Integration Tests
 
 I uge 6 fokuserede vi på automatiserede tests.
 
-Vi havde allerede arbejdet med tests af vores DAO-lag, men nu skulle vi også teste vores REST API.
+Vi havde allerede arbejdet med tests af DAO-laget, men nu skulle vi også teste REST API’et.
 
 Vi brugte REST Assured til at sende HTTP-requests til vores endpoints og kontrollere, at de returnerede de forventede resultater.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Arbejdet med REST Assured
-- Brugt JUnit til automatiserede tests
-- Arbejdet med Hamcrest
-- Testet GET-requests
-- Testet POST-requests
-- Testet PUT-requests
-- Testet DELETE-requests
-- Kontrolleret HTTP-statuskoder
-- Kontrolleret JSON-responses
-- Testet gyldige og ugyldige requests
-- Arbejdet med DAO-tests
-- Arbejdet med integrationstests
-- Brugt Testcontainers til database-tests
-- Testet forskellige fejlscenarier
-- Arbejdet med tests af vores AI-integration
+* Arbejdet med JUnit.
+* Brugt REST Assured og Hamcrest.
+* Testet GET, POST, PUT og DELETE.
+* Kontrolleret HTTP-statuskoder.
+* Kontrolleret JSON-responses.
+* Testet gyldige og ugyldige requests.
+* Testet JWT-beskyttede endpoints.
+* Udviklet DAO-tests og API-tests.
+* Implementeret PostgreSQL med Testcontainers.
+* Oprettet HibernateTestConfig.
+* Oprettet DatabaseTest.
+* Oprettet ApiTest.
+* Implementeret constructor injection i DAO-klasserne.
+* Testet AI-endpointet med en fake AI-service.
 
-### Resultat
+Fra manuel testopsætning til Testcontainers
 
-Vi fik udvidet vores testopsætning, så vi kunne kontrollere flere dele af DriveApp automatisk.
+Tidligere krævede vores API-tests, at vi manuelt startede Javalin på localhost:7070.
 
-Med REST Assured kunne vi teste vores endpoints uden at skulle sende alle requests manuelt.
+Testene var også afhængige af en eksisterende PostgreSQL-database og testbrugere med bestemte loginoplysninger.
 
-Vi arbejdede både med succesfulde requests og fejlscenarier.
+Det gjorde testene mere besværlige at starte og vedligeholde.
 
-Det gjorde det nemmere at opdage problemer og kontrollere, at vores backend fortsat fungerede efter ændringer i koden.
+Vi forbedrede derfor testopsætningen ved at implementere Testcontainers.
 
----
+Testcontainers starter automatisk en midlertidig PostgreSQL-database gennem Docker.
 
-# Week 7 – Security, BCrypt & JWT
+Vi oprettede to fælles testklasser:
+
+DatabaseTest
+
+* Starter PostgreSQL med Testcontainers.
+* Opretter en EntityManagerFactory til testdatabasen.
+* Gør databaseforbindelsen tilgængelig for testklasserne.
+* Lukker forbindelsen og stopper containeren efter testene.
+
+ApiTest
+
+* Arver fra DatabaseTest.
+* Starter Javalin automatisk.
+* Bruger en dynamisk port i stedet for den faste port 7070.
+* Konfigurerer REST Assured.
+* Stopper serveren efter testene.
+
+Vores API-tests opretter desuden selv de nødvendige testbrugere.
+
+Environment Variables til tests
+
+Efter ændringen kræver vores samlede testpakke kun:
+
+JWT_SECRET=<test-secret>
+GEMINI_API_KEY=<gemini-api-key>
+
+JWT_SECRET bruges til tests af authentication og authorization.
+
+GEMINI_API_KEY bruges til DrivingAiServiceTest, som kommunikerer med den rigtige Gemini API.
+
+DAO-tests bruger ingen af disse variabler, mens AiApiTest bruger fake Gemini og derfor ikke kræver en Gemini API-nøgle.
+
+Vi behøver ikke længere de gamle TEST_INSTRUCTOR_EMAIL, TEST_INSTRUCTOR_PASSWORD, TEST_STUDENT_EMAIL og TEST_STUDENT_PASSWORD.
+
+Vi behøver heller ikke databaseoplysninger til Testcontainers-testene.
+
+Resultat
+
+Vi har fået en automatiseret testopsætning, hvor PostgreSQL og Javalin startes direkte fra testklasserne.
+
+Testene er dermed uafhængige af vores eksisterende lokale database og produktionsdatabase.
+
+Vi har kørt DAO-tests, API-tests, JWT-tests, BCrypt-tests og Gemini-servicetests.
+
+Vi har også kørt hele testpakken samlet med succes.
+
+Det har gjort vores testopsætning mere automatiseret og lettere at vedligeholde.
+
+⸻
+
+Week 7 – Security, BCrypt & JWT
 
 I uge 7 arbejdede vi med sikkerhed i vores REST API.
 
@@ -280,41 +334,38 @@ Det var vigtigt for DriveApp, fordi elever og kørelærere ikke nødvendigvis sk
 
 Vi arbejdede også med sikker opbevaring af passwords.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Arbejdet med authentication
-- Arbejdet med authorization
-- Implementeret BCrypt password hashing
-- Arbejdet med sikker håndtering af passwords
-- Implementeret login-funktionalitet
-- Arbejdet med JSON Web Tokens
-- Oprettet JWTToken
-- Arbejdet med JWT payload og claims
-- Implementeret brugerroller
-- Arbejdet med STUDENT og INSTRUCTOR
-- Beskyttet endpoints med adgangskontrol
-- Arbejdet med security filters
-- Testet JWT-funktionalitet
-- Arbejdet med BcryptTest
-- Arbejdet med JWTTokenTest
+* Authentication og authorization.
+* BCrypt password hashing.
+* Login-funktionalitet.
+* JSON Web Tokens.
+* JWTToken.
+* JWT payload og claims.
+* Brugerrollerne STUDENT og INSTRUCTOR.
+* Adgangskontrol til beskyttede endpoints.
+* Security filters.
+* Tests af JWT-funktionalitet.
+* BcryptTest og JWTTokenTest.
+* API-tests af requests uden JWT og med ugyldige tokens.
 
-### Resultat
+Resultat
 
 Vi fik implementeret et security-lag i DriveApp.
 
-Passwords kunne nu håndteres med BCrypt, så de ikke skulle gemmes direkte som almindelig tekst.
+Passwords håndteres med BCrypt, så de ikke gemmes direkte som almindelig tekst.
 
-Vi arbejdede samtidig med JWT, som gør det muligt at identificere brugere ved efterfølgende requests.
+Ved login kan en bruger modtage et JWT-token, som bruges til authentication ved efterfølgende requests.
 
-Ved hjælp af authorization kunne vi begrænse adgangen til bestemte endpoints baseret på brugerens rolle.
+Med authorization kan vi begrænse adgangen til bestemte funktioner baseret på brugerens rolle.
 
-Det betyder eksempelvis, at en elev og en kørelærer kan have forskellige rettigheder i systemet.
+Vi har også testet, at requests uden gyldigt JWT-token bliver afvist.
 
-Vi fik dermed praktisk erfaring med at beskytte et REST API og håndtere brugeradgang.
+Det gav os praktisk erfaring med sikkerhed i REST API’er og forskellen mellem authentication og authorization.
 
----
+⸻
 
-# Week 8 – Deployment & DevOps
+Week 8 – Deployment & DevOps
 
 I uge 8 arbejdede vi med deployment og DevOps.
 
@@ -322,119 +373,204 @@ Formålet var at gøre DriveApp tilgængelig uden for vores lokale udviklingsmil
 
 Vi arbejdede med Docker og GitHub Actions for at forstå, hvordan en Java-applikation kan bygges, pakkes og køres på en server.
 
-Vi arbejdede også med CI/CD for at automatisere dele af udviklings og deploymentprocessen.
+Vi arbejdede også med CI/CD for at automatisere dele af udviklings- og deploymentprocessen.
 
-### Det har vi implementeret
+Det har vi implementeret
 
-- Arbejdet med Docker
-- Oprettet Dockerfile
-- Arbejdet med Docker Compose
-- Arbejdet med Docker images og containers
-- Brugt Maven til at bygge applikationen
-- Arbejdet med JAR-filer
-- Oprettet GitHub Actions workflow
-- Arbejdet med CI/CD
-- Automatiseret build og tests
-- Arbejdet med Docker Hub
-- Arbejdet med DigitalOcean
-- Konfigureret PostgreSQL til deployment
-- Arbejdet med environment variables
-- Arbejdet med domæne og HTTPS
-- Testet vores deployede REST API
+* Arbejdet med Docker.
+* Oprettet Dockerfile.
+* Arbejdet med Docker Compose.
+* Arbejdet med Docker images og containers.
+* Brugt Maven til at bygge applikationen.
+* Arbejdet med JAR-filer.
+* Oprettet GitHub Actions-workflow.
+* Automatiseret build og tests.
+* Integreret Testcontainers i GitHub Actions.
+* Arbejdet med Docker Hub.
+* Arbejdet med DigitalOcean.
+* Konfigureret PostgreSQL til deployment.
+* Arbejdet med environment variables.
+* Arbejdet med domæne og HTTPS.
+* Testet vores deployede REST API.
 
-### Deployment
+GitHub Actions
+
+Vi har opdateret vores GitHub Actions-workflow, så det passer til den nye Testcontainers-opsætning.
+
+Tidligere startede workflowet en PostgreSQL-service og Javalin manuelt. Det oprettede også testbrugere direkte i databasen.
+
+Efter ændringen håndterer testklasserne selv opstarten af PostgreSQL og Javalin.
+
+Workflowet udfører nu følgende proces:
+
+1. Henter projektets kode fra GitHub.
+2. Opsætter Java og Maven.
+3. Kører automatiserede tests med Testcontainers.
+4. Bygger applikationens JAR-fil.
+5. Bygger et Docker-image.
+6. Uploader Docker-imaget til Docker Hub.
+
+Vi bruger GitHub Secrets til at håndtere følsomme oplysninger som JWT_SECRET, GEMINI_API_KEY og Docker Hub-login.
+
+Databaseopsætning
+
+Vi har adskilt vores databaseopsætning mellem udvikling, test og produktion.
+
+Miljø	Databaseforbindelse
+Lokal udvikling	config.properties
+Automatiske DAO- og API-tests	PostgreSQL med Testcontainers
+Produktion	Environment variables
+
+Det betyder, at vores automatiske tests ikke længere behøver at bruge en eksisterende lokal testdatabase.
+
+Deployment
 
 Vores DriveApp API er tilgængeligt på:
 
-[DriveApp – Deployed API](https://driveapp.website)
+DriveApp – Deployed API
 
-### Resultat
+Resultat
 
-Vi fik arbejdet med hele processen fra en lokal Java-applikation til en backend, der kan køre på en ekstern server.
+Vi har arbejdet med processen fra en lokal Java-applikation til en backend, der kan køre på en ekstern server.
 
-Docker gjorde det muligt at pakke vores applikation og dens nødvendige konfiguration i et mere ensartet miljø.
+Docker gør det muligt at pakke applikationen i et ensartet miljø.
 
-Med GitHub Actions arbejdede vi med at automatisere build, tests og deploymentprocessen.
+GitHub Actions automatiserer tests, build og upload af Docker-imaget.
 
-Det gav os en bedre forståelse for, hvordan backend-applikationer kan sættes i drift og vedligeholdes.
+Vi har desuden opdateret vores CI/CD-workflow, så testene bruger den samme Testcontainers-opsætning som under lokal udvikling.
 
----
+Det har givet os en bedre forståelse for automatisering, deployment og vedligeholdelse af backend-applikationer.
 
-# DriveApp – System Features
+⸻
+
+DriveApp – System Features
 
 Ud over de enkelte ugers læringsmål har vi løbende arbejdet på at gøre DriveApp til et mere komplet køreskolesystem.
 
-## Student Management
+Student Management
 
 Systemet indeholder funktioner til administration af elever.
 
-Vi har arbejdet med at oprette, hente, opdatere og slette elevoplysninger gennem vores backend og REST API.
+Vi kan oprette, hente, opdatere og slette elevoplysninger gennem vores REST API.
 
-## Instructor Management
+Elever kan registrere sig og logge ind.
+
+Instructor Management
 
 Vi har implementeret funktioner til håndtering af kørelærere.
 
-Kørelærere indgår i systemets databasestruktur og kan forbindes til køretimer.
+Kørelærere kan forbindes til køretimer gennem vores databasestruktur.
 
-## Lesson & Booking Management
+Systemet indeholder desuden adgangskontrol til beskyttede funktioner.
+
+Lesson & Booking Management
 
 Vi har udviklet funktioner til administration af køretimer og bookinger.
 
-En vigtig del af arbejdet har været at håndtere situationer, hvor flere elever forsøger at booke den samme køretime.
+Elever kan finde tilgængelige køretimer og oprette bookinger.
 
-## AI Assistant
+Vi har arbejdet med kontrol af eksisterende bookinger for at undgå, at samme køretime bookes flere gange.
 
-Vi har integreret Google Gemini i vores backend gennem DrivingAiService.
+AI Assistant
+
+Vi har integreret Google Gemini gennem DrivingAiService.
 
 AI-assistenten er udviklet med fokus på spørgsmål om køreteori, trafikregler og trafiksikkerhed.
 
-## Authentication & Authorization
+Vi tester både den rigtige Gemini-service og AI-endpointet med en fake AI-service.
 
-Vi har arbejdet med BCrypt, JWT og brugerroller.
+Authentication & Authorization
 
-Formålet er at beskytte vores API og sikre, at brugere kun får adgang til de funktioner, de har tilladelse til.
+Vi bruger BCrypt til password hashing og JWT til authentication.
 
-## Automated Testing
+Systemet arbejder med brugerrollerne STUDENT og INSTRUCTOR.
 
-Vi har arbejdet med automatiserede tests af vores DAO-lag, REST API og forskellige services.
+Adgangskontrol bruges til at beskytte relevante API-endpoints.
 
-Testene hjælper os med at kontrollere funktionaliteten og opdage fejl under udviklingen.
+Automated Testing
 
----
+Vi har implementeret automatiserede tests med JUnit, REST Assured og Testcontainers.
 
-# Project Architecture
+DAO- og API-tests bruger en midlertidig PostgreSQL-database.
 
-DriveApp er udviklet som en Java-backend med en lagdelt struktur.
+API-testene starter Javalin automatisk, og testbrugere oprettes direkte i testmiljøet.
 
-Vi har opdelt projektet i forskellige klasser og komponenter, som hver har deres eget ansvar.
+Det gør det muligt at teste systemet uden at påvirke produktionsdatabasen.
 
-### Controllers
+⸻
 
-Controllers modtager HTTP-requests og returnerer responses til klienten.
+Project Architecture
 
-### Services
+DriveApp er udviklet som en Java-backend med en lagdelt arkitektur.
 
-Serviceklasserne håndterer projektets forretningslogik.
+Vi har opdelt projektet i forskellige klasser og komponenter med hver deres ansvar.
 
-Eksempelvis arbejder BookingService med bookingfunktionaliteten, mens DrivingAiService håndterer kommunikationen med Gemini.
+Routes
 
-### DAO
+Routes definerer vores REST API-endpoints og forbinder HTTP-requests med de relevante controllers.
 
-DAO-laget håndterer kommunikationen med databasen gennem JPA og Hibernate.
+Controllers
 
-### Entities
+Controllers håndterer requests, behandler input og returnerer HTTP-responses.
+
+Services
+
+Serviceklasser bruges til funktionalitet, der har sit eget ansvar.
+
+Eksempelvis håndterer DrivingAiService kommunikationen med Google Gemini.
+
+DAO
+
+DAO-laget håndterer databaseoperationer gennem JPA og Hibernate.
+
+Vi bruger constructor injection med EntityManagerFactory, så vores DAO-klasser kan arbejde med forskellige databaseforbindelser.
+
+Entities
 
 Entities repræsenterer de data, vi gemmer i PostgreSQL.
 
-### DTO
+De vigtigste entities er:
 
-DTO'er bruges til at overføre data mellem forskellige dele af applikationen og til at styre, hvilke oplysninger vores API modtager og returnerer.
+* Student
+* Instructor
+* Lesson
+* Booking
 
-Denne opdeling gør projektet mere overskueligt og lettere at vedligeholde.
+DTO
 
----
+DTO’er bruges til at overføre data mellem forskellige dele af applikationen og til at styre, hvilke oplysninger vores API modtager og returnerer.
 
-# Samlet resultat
+Dependency Injection
+
+Vi har implementeret dependency injection i vores DAO-klasser og Application.
+
+Det betyder, at databaseforbindelsen kan sendes ind i klasserne udefra.
+
+Vi kan derfor bruge den normale Hibernate-konfiguration i applikationen og Testcontainers i vores tests.
+
+Vi har også gjort det muligt at injicere en fake AI-funktion til AI API-tests.
+
+Architecture Flow
+
+HTTP Request
+      ↓
+Javalin Routes
+      ↓
+Controller
+      ↓
+DAO
+      ↓
+Hibernate / JPA
+      ↓
+PostgreSQL
+      ↓
+JSON Response
+
+Denne opdeling gør projektet mere overskueligt, lettere at teste og lettere at vedligeholde.
+
+⸻
+
+Samlet resultat
 
 Gennem 3. semester har vi udviklet DriveApp fra et mindre Java-projekt til et backend-system med flere forskellige funktioner.
 
@@ -446,6 +582,12 @@ Vi integrerede også Google Gemini, arbejdede med concurrency i vores bookingsys
 
 Til sidst arbejdede vi med Docker, GitHub Actions og deployment for at gøre vores backend tilgængelig online.
 
-Projektet har givet os erfaring med hele udviklingsprocessen fra database og backend-logik til testing, security og deployment.
+En vigtig forbedring af projektet har været implementeringen af Testcontainers.
 
-DriveApp samler dermed mange af de teknologier og emner, vi har arbejdet med gennem semesteret, i et samlet projekt.
+Vi gik fra en manuel testopsætning med en eksisterende PostgreSQL-database og Javalin på localhost til automatiserede integrationstests, som selv starter deres database og API-server.
+
+Vi har også arbejdet med dependency injection, så vores kode lettere kan testes med forskellige databaseforbindelser og en simuleret AI-service.
+
+Projektet har dermed givet os erfaring med hele udviklingsprocessen fra database og backend-logik til REST API, testing, security og deployment.
+
+DriveApp samler semesterets centrale backend-teknologier i ét projekt og viser, hvordan vi har udviklet og forbedret systemet gennem undervisningsforløbet.
